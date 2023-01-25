@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------Colors------------------------------------------ */
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Cyan-right: hsl(179, 62%, 50%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+/* ------------------------------------------Styling------------------------------------------ */
+body {
+    background-color: var(--Light-Gray);
+    font-size: 16px;
+}
+
+main {
+    font-family: 'Karla', sans-serif;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+/* ------------------------------------Card------------------------------------ */
+#card {
+    max-width: 900px;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.8) 0px 8px 24px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+/* --------------------------top-------------------------- */
+#top {
+    background-color: white;
+    padding: 2rem;
+}
+
+#top h1 {
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+}
+
+#top h2 {
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+#top p {
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+    font-size: 1.45rem;
+    line-height: 2.1rem;
+}
+
+/* --------------------------bottom-------------------------- */
+#bottom {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* --------------------left-------------------- */
+#left {
+    padding: 2.5rem 3.3rem;
+    padding-bottom: 6rem;
+    background-color: var(--Cyan);
+}
+
+#left h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.65rem;
+    margin-bottom: 1.3rem;
+}
+
+#left #price {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-column-gap: .6rem;
+}
+
+#left #price #h {
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+    display: grid;
+    align-content: center;
+}
+
+#left #price #p {
+    color: var(--Light-Gray);
+    font-size: 1.1rem; 
+    font-weight: 400;
+    display: grid;
+    align-content: center;
+}
+
+#left p {
+    color: var(--Light-Gray);
+    font-weight: 400;
+    font-size: 1.45rem;
+    margin-bottom: 2rem;
+}
+
+#left #sign-up-btn {
+    font-family: 'Karla', sans-serif;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    background-color: var(--Bright-Yellow);
+    font-weight: 700;
+    box-shadow: rgba(100, 100, 111, .5) 0px 11px 30px 0px;
+}
+
+/* --------------------right-------------------- */
+#right {
+    padding: 2.5rem 3.3rem;
+    padding-bottom: 6rem;
+    background-color: var(--Cyan-right);
+}
+
+#right h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.65rem;
+    margin-bottom: 1.3rem;
+}
+
+#right p {
+    color: var(--Light-Gray);
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+}
+
+/* ------------------------------------------footer------------------------------------------ */
+footer { 
+    font-size: 1.1rem; 
+    text-align: center; 
+    padding: 3rem;
+    color: var(--Grayish-Blue);
+    font-family: 'Karla', sans-serif;
+}
+
+footer a { 
+    color: var(--Cyan); 
+    text-decoration: none;
+}
+
+footer a:hover { 
+    color: var(--Cyan-right); 
+}
+
+/* ------------------------------------------Responsive design------------------------------------------ */
+@media only screen and (max-width: 980px) {
+    body {
+        margin: 0rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 821px) {
+    body {
+        margin: 2rem 2rem;
+    }
+    /* ------------------------------------Card------------------------------------ */
+    #card {
+        max-width: 810px;
+        border-radius: .5rem;
+        overflow: hidden;
+        box-shadow: rgba(149, 157, 165, 0.8) 0px 8px 24px;
+        display: grid;
+        grid-template-rows: 33% 67% ;
+    }
+
+    /* --------------------------bottom-------------------------- */
+    #bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /* --------------------left-------------------- */
+    #left {
+        padding: 2.5rem 3.3rem;
+        background-color: var(--Cyan);
+    }
+
+    #left h3 {
+        color: white;
+        font-weight: 700;
+        font-size: 1.65rem;
+        margin-bottom: 1.3rem;
+    }
+
+    #left #price {
+        display: grid;
+        grid-template-columns: 13% 87%;
+        grid-column-gap: .6rem;
+    }
+
+    /* --------------------right-------------------- */
+    #right {
+        padding: 3rem 3.3rem;
+    }
+
+}
+
+@media only screen and (max-width: 715px) {
+    /* --------------------------top-------------------------- */
+    #top h1 {
+        font-size: 1.7rem;
+    }
+
+    #top h2 {
+        font-size: 1.4rem;
+    }
+
+    #top p {
+        font-size: 1.25rem;
+    }
+
+    /* --------------------------bottom-------------------------- */
+    /* --------------------left-------------------- */
+    #left h3 {
+        color: white;
+        font-weight: 700;
+        font-size: 1.45rem;
+        margin-bottom: 1.3rem;
+    }
+    
+    #left #price #h {
+        font-size: 2.3rem;
+    }
+    
+    #left #price #p {
+        font-size: .9rem; 
+    }
+    
+    #left p {
+        font-size: 1.25rem;
+    }
+
+    #left #price {
+        display: grid;
+        grid-template-columns: 14% 86%;
+        grid-column-gap: .6rem;
+    }
+
+    /* --------------------right-------------------- */
+    #right h3 {
+        font-size: 1.45rem;
+    }
+    
+    #right p {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 630px) {
+    /* --------------------------bottom-------------------------- */
+    /* --------------------left-------------------- */
+    #left #price {
+        display: grid;
+        grid-template-columns: 17% 83%;
+        grid-column-gap: .6rem;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    /* --------------------------top-------------------------- */
+    #top h1 {
+        font-size: 1.6rem;
+    }
+
+    #top h2 {
+        font-size: 1.3rem;
+    }
+
+    #top p {
+        font-size: 1.15rem;
+    }
+
+    /* --------------------------bottom-------------------------- */
+    /* --------------------left-------------------- */
+    #left #price {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-column-gap: .7rem;
+    }
+
+}
+
+@media only screen and (max-width: 488px) {
+    /* --------------------------top-------------------------- */
+    #top h1 {
+        font-size: 1.5rem;
+    }
+
+    #top h2 {
+        font-size: 1.2rem;
+    }
+
+    #top p {
+        font-size: 1.05rem;
+    }
+
+    /* --------------------------bottom-------------------------- */
+    /* --------------------left-------------------- */
+    #left #price {
+        display: grid;
+        grid-template-columns: 24% 76%;
+        grid-column-gap: .7rem;
+    }
+
+    #left h3 {
+        font-size: 1.35rem;
+    }
+    
+    #left #price #h {
+        font-size: 2.1rem;
+    }
+    
+    #left p {
+        font-size: 1.15rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 420px) {
+    /* --------------------------top-------------------------- */
+    #top h1 {
+        font-size: 1.4rem;
+    }
+
+    #top h2 {
+        font-size: 1.1rem;
+    }
+
+    #top p {
+        font-size: .95rem;
+        line-height: 1.7rem;
+    }
+
+    /* --------------------------bottom-------------------------- */
+    /* --------------------left-------------------- */
+    #left #price {
+        display: grid;
+        grid-template-columns: 24% 76%;
+        grid-column-gap: .7rem;
+    }
+
+    #left h3 {
+        font-size: 1.25rem;
+    }
+    
+    #left #price #h {
+        font-size: 2rem;
+    }
+    
+    #left p {
+        font-size: 1rem;
+    }
+
+    #left #sign-up-btn {
+        font-size: 1rem;
+    }
+    
+
+    /* --------------------right-------------------- */
+    #right h3 {
+        font-size: 1.25rem;
+    }
+    
+}
+
+@media only screen and (max-width: 407px) {
+    /* --------------------------top-------------------------- */
+    #top h1 {
+        font-size: 1.3rem;
+    }
+
+    #top h2 {
+        font-size: 1rem;
+    }
+
+    #top p {
+        font-size: .85rem;
+    }
+
+    /* --------------------------bottom-------------------------- */
+    /* --------------------left-------------------- */
+    #left #price {
+        display: grid;
+        grid-template-columns: 24% 76%;
+        grid-column-gap: .7rem;
+    }
+
+    #left h3 {
+        font-size: 1.2rem;
+    }
+    
+    #left #price #h {
+        font-size: 2rem;
+    }
+    
+    #left p {
+        font-size: .9rem;
+    }
+
+    /* --------------------right-------------------- */
+    #right p {
+        font-size: .9rem;
+    }
+
+    footer { 
+        font-size: 1rem; 
+    }
+    
+}
+
+@media only screen and (max-width: 384px) {
+    /* --------------------------top-------------------------- */
+    #top h1 {
+        font-size: 1.25rem;
+    }
+
+    #top h2 {
+        font-size: .95rem;
+    }
+
+    #top p {
+        font-size: .8rem;
+    }
+
+    /* --------------------------bottom-------------------------- */
+    /* --------------------left-------------------- */
+    #left #price {
+        display: grid;
+        grid-template-columns: 27% 73%;
+        grid-column-gap: .8rem;
+    }
+
+    #left h3 {
+        font-size: 1.2rem;
+    }
+    
+    #left #price #h {
+        font-size: 2rem;
+    }
+    
+    #left p {
+        font-size: .85rem;
+    }
+    
+    footer { 
+        font-size: .9rem; 
+    }
+    
+}
